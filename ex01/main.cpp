@@ -18,5 +18,8 @@ int main()
 		else
 			std::cout << "Brain address: " << ((Dog*) animals[i])->getBrain() << std::endl;
 	}
+	for (int i = 0; i < 10; ++i) {
+		delete animals[i];
+	}
 	return 0;
 }
