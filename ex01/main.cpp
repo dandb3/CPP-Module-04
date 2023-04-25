@@ -14,9 +14,9 @@ int main()
 	for (int i = 0; i < 10; ++i) {
 		animals[i]->makeSound();
 		if (i % 2 == 0)
-			std::cout << "Brain address: " << ((Cat*) animals[i])->getBrain() << std::endl;
+			std::cout << "Brain address: " << dynamic_cast<Cat*>(animals[i])->getBrain() << std::endl;
 		else
-			std::cout << "Brain address: " << ((Dog*) animals[i])->getBrain() << std::endl;
+			std::cout << "Brain address: " << dynamic_cast<Dog*>(animals[i])->getBrain() << std::endl;
 	}
 	for (int i = 0; i < 10; ++i) {
 		delete animals[i];
